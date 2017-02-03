@@ -1,0 +1,23 @@
+<ion-header *ngIf="veg">
+	<ion-navbar>
+		<ion-title>{{veg.name}}</ion-title>
+	</ion-navbar>
+</ion-header>
+
+
+<ion-content padding *ngIf="veg">
+	
+	<img [src]="'assets/img/' + veg.imgUrl">
+	
+	<h2>
+		{{veg.name}} details:
+	</h2>
+	<ul>
+		<li>
+			{{veg.price}}&#8362;
+		</li>
+		<li>
+			color : {{veg.color}}
+		</li>
+	</ul>
+</ion-content>
