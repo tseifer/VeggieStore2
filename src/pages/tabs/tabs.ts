@@ -5,6 +5,7 @@ import {AboutPage} from '../about/about';
 import {ContactPage} from '../contact/contact';
 import {VeggieListPage} from '../veggie-list/veggie-list';
 import {ShoppingBagPage} from '../shopping-bag/shopping-bag';
+import {DataService} from '../../service/Data.service';
 
 @Component({
 	templateUrl: 'tabs.html'
@@ -15,8 +16,11 @@ export class TabsPage
 	// should be each tab's root Page
 	veggieList: any = VeggieListPage;
 	shoppingBag: any = ShoppingBagPage;
+	info;
 	
-	constructor() {
-		
+	constructor(private ds:DataService) {
+			this.info = this.ds.numberOfItemsinBag;
 	}
+	
+	
 }
