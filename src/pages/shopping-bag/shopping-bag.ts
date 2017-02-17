@@ -18,14 +18,34 @@ export class ShoppingBagPage
 	
 	ionViewDidEnter() {
 		this.bag = this.ds.getShoppingBag();
+		this.refreshTotal();
+	}
+	
+	refreshTotal()
+	{
 		this.total = this.bag.reduce((p, v) => p += v.price, 0);
 	}
 	
-	onRemove(i){
-		
-		console.log(i);
+	onRemove(idx){
+		console.log(idx);
+		this.ds.removeItem(idx)
 	}
+	
 	log(...msg) {
 		if (this.debug) console.log(...msg);
 	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+

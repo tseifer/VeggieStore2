@@ -3,7 +3,9 @@ import {Injectable} from '@angular/core';
 @Injectable()
 export class DataService
 {
-	constructor() {}
+	constructor() {
+		
+	}
 	
 	private _shoppingBag: any[] = [];
 	
@@ -14,6 +16,10 @@ export class DataService
 	
 	getShoppingBag() {
 		return this._shoppingBag;
+	}
+	
+	removeItem(idx) {
+		this._shoppingBag.splice(idx, 1)
 	}
 	
 	getVeggies() {

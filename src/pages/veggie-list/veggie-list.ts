@@ -19,9 +19,9 @@ export class VeggieListPage
 		this.veggies = this.ds.getVeggies();
 	}
 	
-	
-	addVeg(veg) {
-		this.ds.addVegToShoopingBag(veg);
+	addVeg(veg)
+	{
+		this.ds.addVegToShoopingBag({price: veg.price, name: veg.name, color: veg.color, imgUrl: veg.imgUrl});
 	}
 }
 
