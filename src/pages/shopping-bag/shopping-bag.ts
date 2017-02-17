@@ -27,8 +27,10 @@ export class ShoppingBagPage
 	}
 	
 	onRemove(idx){
-		console.log(idx);
-		this.ds.removeItem(idx)
+		console.log('removing index' + idx);
+		this.ds.removeItem(idx);
+		this.refreshTotal();
+		
 	}
 	
 	log(...msg) {
