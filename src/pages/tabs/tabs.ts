@@ -19,7 +19,7 @@ export class TabsPage
 	info;
 	
 	constructor(private ds:DataService) {
-			this.info = this.ds.numberOfItemsinBag;
+			this.info = this.ds.count;
 	}
 	
 	

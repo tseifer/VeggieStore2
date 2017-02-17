@@ -29,12 +29,13 @@ export class DataService
 	constructor() {
 		let str:string                = window.localStorage.getItem('vegetables');
 		this._shoppingBag = JSON.parse(str || '[]');
-		this.numberOfItemsinBag = {num: this._shoppingBag.length}
-		
+		this.numberOfItemsinBag = {num: this._shoppingBag.length};
+		this.count = this._shoppingBag.length;
 	}
 	
 	private _shoppingBag: any[];
 	        numberOfItemsinBag: {num: number} = {num: 0};
+	        count = 0;
 	
 	private saveData() {
 		window.localStorage.setItem('vegetables', JSON.stringify(this._shoppingBag));
@@ -42,6 +43,7 @@ export class DataService
 	
 	addVegToShoopingBag(veg) {
 		this.numberOfItemsinBag.num++;
+		this.count++;
 		
 		// console.log('adding to bag:', veg);
 		this._shoppingBag.push(veg);
@@ -55,6 +57,8 @@ export class DataService
 	removeItem(idx) {
 		this._shoppingBag.splice(idx, 1);
 		this.numberOfItemsinBag.num--;
+		this.count--;
+		
 		this.saveData();
 		
 	}
