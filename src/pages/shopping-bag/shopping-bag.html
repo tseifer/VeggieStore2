@@ -1,24 +1,31 @@
 <ion-header>
-	
 	<ion-navbar>
-		<ion-title>ShoppingBag</ion-title>
+		<ion-title>Shopping Bag</ion-title>
 	</ion-navbar>
-
 </ion-header>
 
 
 <ion-content padding>
-	<h2>
-		Total : {{total | number : '1.2-2'}}&#8362;
+	
+	<h2 *ngIf="!bag.length">
+		Your shopping bag is empty.
 	</h2>
-	<h2 *ngIf="debug">bag: {{bag | json}}</h2>
-	<ion-list>
-		<ion-item *ngFor="let item of bag">
-			<ion-avatar item-left>
-				<img [src]="'assets/img/' + item.imgUrl">
-			</ion-avatar>
-			<h2>{{item.name}}</h2>
-			<p>{{item.price}}&#8362;</p>
-		</ion-item>
-	</ion-list>
+	<div *ngIf="bag.length">
+		<ion-list>
+			<ion-item *ngFor="let item of bag">
+				<ion-avatar item-left>
+					<img [src]="'assets/img/' + item.imgUrl">
+				</ion-avatar>
+				<h2>{{item.name}}</h2>
+				<p>{{item.price}}&#8362;</p>
+				
+				<button ion-button clear icon-only item-right (click)="onRemove(item)">
+					<ion-icon name="remove-circle"  color="mainbutton"></ion-icon>
+				</button>
+			</ion-item>
+		</ion-list>
+		<h2>
+			Total : {{total | number : '1.2-2'}}&#8362;
+		</h2>
+	</div>
 </ion-content>

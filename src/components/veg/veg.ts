@@ -1,5 +1,6 @@
 import {Component, Input} from '@angular/core';
-import {NavParams} from 'ionic-angular';
+import {NavParams, NavController} from 'ionic-angular';
+import {VegDetailsPage} from '../../pages/veg-details/veg-details';
 
 @Component({
 	selector   : 'veg',
@@ -9,7 +10,10 @@ export class VegComponent
 {
 	@Input() veg;
 	
-	constructor(private navParams: NavParams) {
+	constructor(public navCtrl: NavController, private navParams: NavParams) {}
+	
+	selectVeg(v) {
+		this.navCtrl.push(VegDetailsPage, this.veg)
 	}
 	
 }

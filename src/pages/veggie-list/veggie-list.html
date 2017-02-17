@@ -12,16 +12,8 @@
 		Veggies
 	</h2>
 	
-	<!--
-	  <ul>
-		<li *ngFor="let veg of veggies" [ngStyle]="{'color': veg.color}">
-		  {{veg.name}}
-		</li>
-	  </ul>
-	-->
-	
 	<div *ngFor="let v of veggies">
-		<veg [veg]="v" (click)="selectVeg(v)"></veg>
+		<veg [veg]="v"></veg>
 		
 		<button ion-fab mini (click)="addVeg(v)">
 			<ion-icon name="add" ></ion-icon>

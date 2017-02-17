@@ -1,6 +1,7 @@
 import {NgModule, ErrorHandler} from '@angular/core';
 import {IonicApp, IonicModule, IonicErrorHandler} from 'ionic-angular';
 import {MyApp} from './app.component';
+
 import {TabsPage} from '../pages/tabs/tabs';
 import {VeggieListPage} from '../pages/veggie-list/veggie-list';
 import {DataService} from '../service/Data.service';

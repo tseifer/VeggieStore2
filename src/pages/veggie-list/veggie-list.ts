@@ -19,12 +19,8 @@ export class VeggieListPage
 		this.veggies = this.ds.getVeggies();
 	}
 	
-	selectVeg(v) {
-		this.navCtrl.push(VegDetailsPage, v)
-	}
 	
 	addVeg(veg) {
-		debugger;
 		this.ds.addVegToShoopingBag(veg);
 	}
 }

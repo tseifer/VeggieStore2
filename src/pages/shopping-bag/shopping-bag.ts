@@ -10,10 +10,9 @@ declare var console;
 export class ShoppingBagPage
 {
 	
-	constructor(public navCtrl: NavController, public navParams: NavParams, private ds: DataService) {
-	}
+	constructor(public navCtrl: NavController, public navParams: NavParams, private ds: DataService) { }
 	
-	debug      = false;
+	debug      = true;
 	bag: any[] = [];
 	total: number;
 	
@@ -22,6 +21,10 @@ export class ShoppingBagPage
 		this.total = this.bag.reduce((p, v) => p += v.price, 0);
 	}
 	
+	onRemove(i){
+		
+		console.log(i);
+	}
 	log(...msg) {
 		if (this.debug) console.log(...msg);
 	}
