@@ -8,6 +8,7 @@ import {DataService} from '../service/Data.service';
 import {VegComponent} from '../components/veg/veg';
 import {VegDetailsPage} from '../pages/veg-details/veg-details';
 import {ShoppingBagPage} from '../pages/shopping-bag/shopping-bag';
+import {IonicNativePage} from '../pages/ionic-native/ionic-native';
 
 @NgModule({
 	declarations   : [
@@ -16,7 +17,8 @@ import {ShoppingBagPage} from '../pages/shopping-bag/shopping-bag';
 		VeggieListPage,
 		VegComponent,
 		VegDetailsPage,
-		ShoppingBagPage
+		ShoppingBagPage,
+		IonicNativePage
 	],
 	imports        : [
 		IonicModule.forRoot(MyApp)
@@ -28,7 +30,8 @@ import {ShoppingBagPage} from '../pages/shopping-bag/shopping-bag';
 		VeggieListPage,
 		VegComponent,
 		VegDetailsPage,
-		ShoppingBagPage
+		ShoppingBagPage,
+		IonicNativePage
 	
 	],
 	providers      : [

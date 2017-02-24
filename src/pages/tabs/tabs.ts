@@ -1,11 +1,9 @@
 import {Component} from '@angular/core';
 
-import {HomePage} from '../home/home';
-import {AboutPage} from '../about/about';
-import {ContactPage} from '../contact/contact';
 import {VeggieListPage} from '../veggie-list/veggie-list';
 import {ShoppingBagPage} from '../shopping-bag/shopping-bag';
 import {DataService} from '../../service/Data.service';
+import {IonicNativePage} from '../ionic-native/ionic-native';
 
 @Component({
 	templateUrl: 'tabs.html'
@@ -16,6 +14,7 @@ export class TabsPage
 	// should be each tab's root Page
 	veggieList: any = VeggieListPage;
 	shoppingBag: any = ShoppingBagPage;
+	ionicNative:any = IonicNativePage;
 	info;
 	
 	constructor(private ds:DataService) {

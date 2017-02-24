@@ -1,7 +1,6 @@
-import {Component, EventEmitter} from '@angular/core';
+import {Component} from '@angular/core';
 import {NavController, NavParams} from 'ionic-angular';
 import {DataService} from '../../service/Data.service';
-import {VegDetailsPage} from '../veg-details/veg-details';
 
 @Component({
 	selector   : 'page-veggie-list',
