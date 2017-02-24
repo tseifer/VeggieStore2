@@ -9,6 +9,7 @@ import {VegComponent} from '../components/veg/veg';
 import {VegDetailsPage} from '../pages/veg-details/veg-details';
 import {ShoppingBagPage} from '../pages/shopping-bag/shopping-bag';
 import {IonicNativePage} from '../pages/ionic-native/ionic-native';
+import {MyMapPage} from '../pages/my-map/my-map';
 
 @NgModule({
 	declarations   : [
@@ -18,7 +19,8 @@ import {IonicNativePage} from '../pages/ionic-native/ionic-native';
 		VegComponent,
 		VegDetailsPage,
 		ShoppingBagPage,
-		IonicNativePage
+		IonicNativePage,
+		MyMapPage
 	],
 	imports        : [
 		IonicModule.forRoot(MyApp)
@@ -31,7 +33,8 @@ import {IonicNativePage} from '../pages/ionic-native/ionic-native';
 		VegComponent,
 		VegDetailsPage,
 		ShoppingBagPage,
-		IonicNativePage
+		IonicNativePage,
+		MyMapPage
 	
 	],
 	providers      : [

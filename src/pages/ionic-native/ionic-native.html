@@ -15,4 +15,11 @@
 
 <ion-content padding>
   <button ion-button color="danger" (click)="onVibrate()">Vibrate</button>
+  <button ion-button color="danger" (click)="onGetLocation()">Get Location</button>
+
+
+
+  <h2 *ngIf="location">
+    {{location}}
+  </h2>
 </ion-content>

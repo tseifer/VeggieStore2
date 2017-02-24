@@ -1,6 +1,7 @@
 import {Component} from '@angular/core';
 import {NavController, NavParams} from 'ionic-angular';
 import {Vibration} from 'ionic-native';
+import {Geolocation} from 'ionic-native';
 
 /*
  Generated class for the IonicNative page.
@@ -14,6 +15,7 @@ import {Vibration} from 'ionic-native';
 })
 export class IonicNativePage
 {
+	location: string;
 	
 	constructor(public navCtrl: NavController, public navParams: NavParams) {}
 	
@@ -25,4 +27,57 @@ export class IonicNativePage
 		debugger;
 		Vibration.vibrate(1000);
 	}
+	
+	onGetLocation() {
+		//promise
+		
+		/*
+		 Geolocation.getCurrentPosition()
+		 .then((resp) => {
+		 this.location = resp.coords.latitude + ":" + resp.coords.longitude
+		 }).catch((error) => {
+		 console.log('Error getting location', error);
+		 });
+		 
+		 */
+		
+		
+		//observable
+		
+		let watch = Geolocation.watchPosition();
+		
+		watch.subscribe((data) => {
+			
+			// data can be a set of coordinates, or an error (if an error occurred).
+			if (data.coords.latitude && data.coords.longitude)
+			{
+				this.location = data.coords.latitude + ":" + data.coords.longitude
+			}
+			
+		});
+		
+	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
