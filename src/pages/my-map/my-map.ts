@@ -59,7 +59,6 @@ export class MyMapPage
 		let watch = Geolocation.watchPosition();
 
 		watch.subscribe((data) => {
-			debugger;
 			// data can be a set of coordinates, or an error (if an error occurred).
 			if (data.coords.latitude && data.coords.longitude && map)
 			{
